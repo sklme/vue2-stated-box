@@ -1,11 +1,11 @@
 <template>
-  <div>2323啥</div>
+  <displayBox>
+    <div>我最厉害</div>
+  </displayBox>
 </template>
 
 <script setup lang="ts">
-//
-const x = 12;
-console.log(x);
+import displayBox from './components/DisplayBox.vue';
 </script>
 
 <style lang="less" scoped>
