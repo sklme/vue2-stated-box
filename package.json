@@ -1,6 +1,6 @@
 {
   "name": "@iskl/vue2-display-box",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "exports": {
     ".": {
