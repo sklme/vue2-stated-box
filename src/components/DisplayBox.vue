@@ -1,25 +1,50 @@
 <template>
-  <div class="statedBox">
+  <div class="stated-box">
     <!-- 加载的状态 -->
     <template v-if="props.isLoading">
       <slot name="loading">
-        <LoadingCircle></LoadingCircle>
+        <LoadingCircle :size="loadingCircleSize"></LoadingCircle>
       </slot>
     </template>
     <!-- 加载的状态 -->
 
     <!-- 加载结束 -->
     <template v-else-if="props.isDone">
-      <div v-if="props.doneState === DoneState.empty" class="empty">
+      <!-- 无数据 -->
+      <div
+        v-if="props.doneState === DoneState.empty"
+        class="empty absolute-center"
+        text="14px gray-400"
+      >
         <div class="empty-tips">
           {{ props.emptyTips }}
         </div>
       </div>
-      <div v-if="props.doneState === DoneState.error" class="error">
+      <!-- 无数据 -->
+
+      <!-- 请求出现错误 -->
+      <div
+        v-if="props.doneState === DoneState.error"
+        class="error"
+        absolute="center"
+        text="red-400 14px"
+      >
         <div class="error-tips">
           {{ props.errorTips }}
         </div>
       </div>
+      <!-- 请求出现错误 -->
+
+      <!-- 请求成功 -->
+      <div
+        v-if="props.doneState === DoneState.resolve"
+        class="resolve"
+        absolute="center"
+        text="14px gray-500"
+      >
+        {{ resolveTips }}
+      </div>
+      <!-- 请求成功 -->
     </template>
     <!-- 加载结束 -->
     <!-- 默认的状态，需要父组件传入 -->
@@ -42,32 +67,19 @@ interface Props {
   // 提示语
   emptyTips?: string;
   errorTips?: string;
+  resolveTips?: string;
+
+  // 加载圈圈的大小
+  loadingCircleSize?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  isLoading: true,
+  isLoading: false,
   isDone: false,
-  doneState: DoneState.empty,
+  doneState: DoneState.resolve,
   emptyTips: '没有找到数据',
   errorTips: '加载失败，请稍后再试',
+  resolveTips: 'request resolved',
+  loadingCircleSize: 32,
 });
 </script>
-
-<style lang="less" scoped>
-//
-
-.empty,
-.error {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: center center;
-  text-align: center;
-}
-
-.empty-tips {
-  color: #aaa;
-  font-size: 14px;
-}
-</style>
