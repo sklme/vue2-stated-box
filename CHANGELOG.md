@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/sklme/vue2-stated-box/compare/v1.0.2...v1.0.3) (2022-08-02)
+
+
+### Bug Fixes
+
+* 发布之前要先build ([af8577d](https://github.com/sklme/vue2-stated-box/commit/af8577db1c87061c8807029b0d2dc8f1f1e5c089))
+
 ## [1.0.2](https://github.com/sklme/vue2-stated-box/compare/v1.0.1...v1.0.2) (2022-08-02)
 
 
