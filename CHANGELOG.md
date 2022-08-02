@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/sklme/vue2-stated-box/compare/v1.0.1...v1.0.2) (2022-08-02)
+
+
+### Bug Fixes
+
+* npm publish access publish ([f4eb6c0](https://github.com/sklme/vue2-stated-box/commit/f4eb6c07fdece2428f6939285efbc15bda288858))
+
 ## [1.0.1](https://github.com/sklme/vue2-stated-box/compare/v1.0.0...v1.0.1) (2022-08-02)
 
 
