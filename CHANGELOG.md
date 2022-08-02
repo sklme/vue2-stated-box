@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/sklme/vue2-stated-box/compare/v1.0.0...v1.0.1) (2022-08-02)
+
+
+### Bug Fixes
+
+* remove private ([7b18a9e](https://github.com/sklme/vue2-stated-box/commit/7b18a9e024a844e3de96ecc04d6600b1cf8fb754))
+
 ## 1.0.0 (2022-08-02)
 
 
