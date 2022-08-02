@@ -53,6 +53,10 @@ jobs:
       - name: Install dependencies
         if: ${{ steps.release.outputs.release_created }}
         run: pnpm install
+      # 编出dist
+      - name: Build
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm build
       # 发布到npm
       - run: npm publish --access=public
         env:
