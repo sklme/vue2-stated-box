@@ -4,10 +4,57 @@ on:
       - main
 name: release-please
 jobs:
+  # 运行在 ubuntu-latest
   release-please:
     runs-on: ubuntu-latest
+
     steps:
+      # 发布的检验
       - uses: google-github-actions/release-please-action@v3
+        name: release-please
+        id: release
         with:
           release-type: node
-          package-name: release-please-action
+          package-name: '@iskl/vue2-display-box'
+      # Checkout 仓库
+      - uses: actions/checkout@v2
+        name: Checkout
+        if: ${{ steps.release.outputs.release_created }}
+      # Install Node.js
+      - uses: actions/setup-node@v1
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
+      # 安装pnpm
+      - uses: pnpm/action-setup@v2.0.1
+        if: ${{ steps.release.outputs.release_created }}
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+      # 获取pnpm的cache
+      - name: Get pnpm store directory
+        if: ${{ steps.release.outputs.release_created }}
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      # 搞定pnpm的缓存
+      - uses: actions/cache@v3
+        if: ${{ steps.release.outputs.release_created }}
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      # 使用pnpm安装依赖
+      - name: Install dependencies
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm install
+      # 发布到npm
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{ steps.release.outputs.release_created }}
