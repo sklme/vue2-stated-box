@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/display-box.js",
+      "require": "./dist/display-box.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

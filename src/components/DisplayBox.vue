@@ -62,7 +62,7 @@ interface Props {
   isLoading?: boolean;
   // 请求完成之后的状态
   isDone?: boolean;
-  doneState?: DoneState;
+  doneState?: DoneState | null;
 
   // 提示语
   emptyTips?: string;
