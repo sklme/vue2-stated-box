@@ -9,6 +9,9 @@
       "require": "./dist/display-box.umd.cjs"
     }
   },
+  "files": [
+    "./dist/*"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
