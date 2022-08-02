@@ -9,4 +9,4 @@
 - error
 - resolve
 
-3. 默认状态通过 slot 传入
+3. 默认状态通过 `slot` 传入
