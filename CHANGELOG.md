@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/sklme/vue2-stated-box/compare/v1.0.3...v1.1.0) (2022-08-03)
+
+
+### Features
+
+* typings ([6abd8e4](https://github.com/sklme/vue2-stated-box/commit/6abd8e412fb07b1240eef4512321defdda4c3f31))
+
 ## [1.0.3](https://github.com/sklme/vue2-stated-box/compare/v1.0.2...v1.0.3) (2022-08-02)
 
 
