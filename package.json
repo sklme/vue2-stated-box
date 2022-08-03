@@ -10,6 +10,8 @@
     },
     "./style.css": "./dist/style.css"
   },
+  "module": "./dist/display-box.js",
+  "main": "./dist/display-box.umd.cjs",
   "files": [
     "dist"
   ],
