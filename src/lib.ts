@@ -1,6 +1,7 @@
 import 'virtual:windi.css';
 
-import displayBox from './components/DisplayBox.vue';
+import DisplayBox from './components/DisplayBox.vue';
 import { useState } from './components/useState';
+import { DoneState } from './components/type';
 
-export { displayBox, useState };
+export { DisplayBox, useState, DoneState };

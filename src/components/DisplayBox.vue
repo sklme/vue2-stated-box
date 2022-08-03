@@ -11,39 +11,34 @@
     <!-- 加载结束 -->
     <template v-else-if="props.isDone">
       <!-- 无数据 -->
-      <div
-        v-if="props.doneState === DoneState.empty"
-        class="empty absolute-center"
-        text="14px gray-400"
-      >
-        <div class="empty-tips">
-          {{ props.emptyTips }}
-        </div>
-      </div>
+      <template v-if="props.doneState === DoneState.empty">
+        <slot name="empty">
+          <div class="empty absolute-center" text="14px gray-400">
+            {{ props.emptyTips }}
+          </div>
+        </slot>
+      </template>
       <!-- 无数据 -->
 
       <!-- 请求出现错误 -->
-      <div
-        v-if="props.doneState === DoneState.error"
-        class="error"
-        absolute="center"
-        text="red-400 14px"
-      >
-        <div class="error-tips">
-          {{ props.errorTips }}
-        </div>
-      </div>
+      <template v-if="props.doneState === DoneState.error">
+        <slot name="error">
+          <div class="error" absolute="center" text="red-400 14px">
+            {{ props.errorTips }}
+          </div>
+        </slot>
+      </template>
       <!-- 请求出现错误 -->
 
       <!-- 请求成功 -->
-      <div
-        v-if="props.doneState === DoneState.resolve"
-        class="resolve"
-        absolute="center"
-        text="14px gray-500"
-      >
-        {{ resolveTips }}
-      </div>
+      <template v-if="props.doneState === DoneState.resolve">
+        <slot name="resolve">
+          <div class="resolve" absolute="center" text="14px gray-500">
+            {{ resolveTips }}
+          </div>
+        </slot>
+      </template>
+
       <!-- 请求成功 -->
     </template>
     <!-- 加载结束 -->
