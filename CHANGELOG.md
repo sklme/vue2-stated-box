@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/sklme/vue2-stated-box/compare/v1.1.1...v1.2.0) (2022-08-03)
+
+
+### Features
+
+* add slots ([6e41341](https://github.com/sklme/vue2-stated-box/commit/6e413418176f41718f3fbd4931ba7b7664aad4e7))
+
 ## [1.1.1](https://github.com/sklme/vue2-stated-box/compare/v1.1.0...v1.1.1) (2022-08-03)
 
 
