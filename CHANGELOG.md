@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/sklme/vue2-stated-box/compare/v1.2.0...v1.3.0) (2022-08-04)
+
+
+### Features
+
+* add pureState utils ([fd2ed10](https://github.com/sklme/vue2-stated-box/commit/fd2ed1082c05d170ca0c3995d0cd668cf046aea2))
+
 ## [1.2.0](https://github.com/sklme/vue2-stated-box/compare/v1.1.1...v1.2.0) (2022-08-03)
 
 
