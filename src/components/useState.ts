@@ -19,6 +19,11 @@ export function useState(initState: InitState = {}) {
     doneState.value = null;
   }
 
+  function setLoading() {
+    resetState();
+    isLoding.value = true;
+  }
+
   function setDone(thisDoneState: DoneState) {
     resetState();
     isDone.value = true;
@@ -49,6 +54,7 @@ export function useState(initState: InitState = {}) {
     setEmpty,
     setError,
     setResolve,
+    setLoading,
   };
 }
 
