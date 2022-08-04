@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/sklme/vue2-stated-box/compare/v1.3.0...v1.3.1) (2022-08-04)
+
+
+### Bug Fixes
+
+* expose setLoading ([8922581](https://github.com/sklme/vue2-stated-box/commit/8922581aebb4bf44f9e2c2eb806c32b0b68626d1))
+
 ## [1.3.0](https://github.com/sklme/vue2-stated-box/compare/v1.2.0...v1.3.0) (2022-08-04)
 
 
