@@ -7,7 +7,7 @@ interface InitState {
   doneState?: DoneState;
 }
 
-export function useState(initState: InitState) {
+export function useState(initState: InitState = {}) {
   // 状态
   const isDone = ref(!!initState.isDone);
   const doneState = ref<DoneState | null>(null);
@@ -49,5 +49,13 @@ export function useState(initState: InitState) {
     setEmpty,
     setError,
     setResolve,
+  };
+}
+
+export function pureState(result: ReturnType<typeof useState>) {
+  return {
+    isDone: result.isDone,
+    isLoding: result.isLoding,
+    doneState: result.doneState,
   };
 }
