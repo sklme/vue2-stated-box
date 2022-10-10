@@ -32,7 +32,7 @@
 
       <!-- 请求成功 -->
       <template v-if="props.doneState === DoneState.resolve">
-        <slot name="resolve">
+        <slot>
           <div class="resolve" absolute="center" text="14px gray-500">
             {{ resolveTips }}
           </div>
@@ -43,7 +43,7 @@
     </template>
     <!-- 加载结束 -->
     <!-- 默认的状态，需要父组件传入 -->
-    <slot v-else></slot>
+    <slot v-else name="fallback"></slot>
     <!-- 默认的状态，需要父组件传入 -->
   </div>
 </template>

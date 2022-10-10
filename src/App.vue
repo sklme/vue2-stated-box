@@ -17,6 +17,6 @@ const state = useState({
 });
 
 setTimeout(() => {
-  state.setEmpty();
+  state.setResolve();
 }, 1000);
 </script>
