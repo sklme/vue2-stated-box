@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/sklme/vue2-stated-box/compare/v1.4.1...v1.4.2) (2022-10-10)
+
+
+### Bug Fixes
+
+* 修复不会默认doneState的问题 ([b4a510a](https://github.com/sklme/vue2-stated-box/commit/b4a510ae00307ead9dec60122bc859bda50b06be))
+
 ## [1.4.1](https://github.com/sklme/vue2-stated-box/compare/v1.4.0...v1.4.1) (2022-10-10)
 
 
