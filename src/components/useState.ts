@@ -10,7 +10,7 @@ interface InitState {
 export function useState(initState: InitState = {}) {
   // 状态
   const isDone = ref(!!initState.isDone);
-  const doneState = ref<DoneState | null>(null);
+  const doneState = ref<DoneState | null>(initState.doneState || null);
   const isLoding = ref(!!initState.isLoading);
 
   function resetState() {
