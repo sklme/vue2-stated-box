@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/sklme/vue2-stated-box/compare/v1.3.1...v1.4.0) (2022-10-10)
+
+
+### Features
+
+* eslint使用npm的实现 ([581715a](https://github.com/sklme/vue2-stated-box/commit/581715a3fd5f73cf3e0011d489b18dff4d23bc0b))
+* 默认状态应该是resolve ([a7e34a1](https://github.com/sklme/vue2-stated-box/commit/a7e34a130a2a4ee2cf4b36767dd4a3ecfcb94294))
+
 ## [1.3.1](https://github.com/sklme/vue2-stated-box/compare/v1.3.0...v1.3.1) (2022-08-04)
 
 
