@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/sklme/vue2-stated-box/compare/v1.4.0...v1.4.1) (2022-10-10)
+
+
+### Bug Fixes
+
+* pnpm lockfile error ([6b162a6](https://github.com/sklme/vue2-stated-box/commit/6b162a6dad4f245d557340790e5dad6980572deb))
+
 ## [1.4.0](https://github.com/sklme/vue2-stated-box/compare/v1.3.1...v1.4.0) (2022-10-10)
 
 
